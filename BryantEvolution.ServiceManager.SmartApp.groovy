@@ -323,7 +323,7 @@ private login() {
             if (response.status == 200) {
                 if (response.data.text() != "Failed") {
                     state.session = [
-                        cookie: response.headers.getAt('Set-Cookie').toString().substring(11),
+                        //cookie: response.headers.getAt('Set-Cookie').toString().substring(11),
                         accessToken: response.data.text(),
                         expiration: now() + 600000
                     ]
